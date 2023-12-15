@@ -1,14 +1,20 @@
-use embedded_hal::digital::v2::{InputPin, PinState, OutputPin};
-use rp_pico::hal::{gpio::{Pin, PinId, Function, PullType, FunctionSio, SioOutput, ValidFunction, PullUp, SioInput, PullDown, DynPullType}};
+use embedded_hal::digital::v2::{OutputPin, PinState};
+use rp_pico::hal::gpio::{
+    Function, FunctionSio, Pin, PinId, PullDown,
+    SioOutput, ValidFunction,
+};
 
 pub struct Led<I: PinId> {
-    pin: Pin<I, FunctionSio<SioOutput>, PullDown>
+    pin: Pin<I, FunctionSio<SioOutput>, PullDown>,
 }
 
 impl<I: PinId> Led<I> {
-    pub fn new<F: Function>(pin: Pin<I, F, PullDown>) -> Self where I: ValidFunction<FunctionSio<SioOutput>>, {
+    pub fn new<F: Function>(pin: Pin<I, F, PullDown>) -> Self
+    where
+        I: ValidFunction<FunctionSio<SioOutput>>,
+    {
         Led {
-            pin: pin.into_push_pull_output_in_state(PinState::Low)
+            pin: pin.into_push_pull_output_in_state(PinState::Low),
         }
     }
 
@@ -18,6 +24,5 @@ impl<I: PinId> Led<I> {
         } else {
             self.pin.set_low().unwrap()
         }
-        
     }
 }

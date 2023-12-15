@@ -1,13 +1,16 @@
 #![no_std]
 #![no_main]
 
+extern crate alloc;
 extern crate panic_halt;
 
 mod delay;
-mod push_button;
+mod heap;
 mod led;
+mod push_button;
 
 use delay::init_delay;
+use heap::init_heap;
 use led::Led;
 use push_button::PushButton;
 use rp_pico::entry;
@@ -20,6 +23,9 @@ fn main() -> ! {
     let mut pac = pac::Peripherals::take().unwrap();
     let core = pac::CorePeripherals::take().unwrap();
     let sio = hal::Sio::new(pac.SIO);
+
+    // Initialize the heap
+    init_heap();
 
     // Set the pins up according to their function on this particular board
     let pins = rp_pico::Pins::new(
@@ -58,12 +64,10 @@ fn main() -> ! {
 
     // We enter a loop
     loop {
-
-        led_r.set_led(but_r.is_pressed().into());
-        led_g.set_led(but_g.is_pressed().into());
-        led_b.set_led(but_b.is_pressed().into());
-        led_y.set_led(but_y.is_pressed().into());
+        led_r.set_led(but_r.is_pressed());
+        led_g.set_led(but_g.is_pressed());
+        led_b.set_led(but_b.is_pressed());
+        led_y.set_led(but_y.is_pressed());
         delay.delay_ms(1);
     }
-
 }

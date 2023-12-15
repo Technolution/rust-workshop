@@ -1,14 +1,19 @@
 use embedded_hal::digital::v2::InputPin;
-use rp_pico::hal::gpio::{Pin, PinId, Function, PullType, FunctionSio, SioOutput, ValidFunction, PullUp, SioInput};
+use rp_pico::hal::gpio::{
+    Function, FunctionSio, Pin, PinId, PullType, PullUp, SioInput, ValidFunction,
+};
 
 pub struct PushButton<I: PinId> {
-    pin: Pin<I, FunctionSio<SioInput>, PullUp>
+    pin: Pin<I, FunctionSio<SioInput>, PullUp>,
 }
 
 impl<I: PinId> PushButton<I> {
-    pub fn new<F: Function, P: PullType>(pin: Pin<I, F, P>) -> Self where I: ValidFunction<FunctionSio<SioInput>>, {
+    pub fn new<F: Function, P: PullType>(pin: Pin<I, F, P>) -> Self
+    where
+        I: ValidFunction<FunctionSio<SioInput>>,
+    {
         PushButton {
-            pin: pin.into_pull_up_input()
+            pin: pin.into_pull_up_input(),
         }
     }
 
