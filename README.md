@@ -16,20 +16,38 @@ One side of the breadboard will be used for the leds, the other side for the but
 - 10 M-F jumper
 - 4x M-M jumper
 
-![](readme-images/rpi.jpg)
+The raspberry pi pico looks like this:
+
+<img src="readme-images/rpi.jpg" style="width: 300px" />
+
+Note: The **pin numbers** above differ from the **gpio numbers**. We will be referring to the pin numbers below.
 
 ## Leds
+We will use one side of the breadboard for the leds, and the other side for the buttons.
+These sides will only interact via the raspberry pi.
+
 - Connect pin 16,17,19,20 to the red,green,blue,yellow to the positive side of the LEDs.
 - Connect negative side of the leds to the center column using the resistors.
-- Connect center column to ground at pin 18. 
+- Connect center column to ground at pin 18 ground (black wire on the picture).
 - Your hardware should now look like this:
 
-![](readme-images/leds.jpg)
+<img src="readme-images/leds.jpg" style="width: 300px" />
 
+## Buttons
 
+We will now connect the buttons, this will be a little messy because of all the jumpers involved.
 
-## 
+- Place the 4 buttons on the breadboard as shown on the image.
+- Using the M-M jumper wires, connect one side of the button to the center rail.
+- Connect the center rail to pin 23 ground (purple wire on the picture).
+- Your hardware should now look like this:
 
+<img src="readme-images/buttons1.jpg" style="width: 300px" />
+
+- Connect pins 25,24,22,21 to the other side of the buttons next to the red,green,blue,yellow leds respectively.
+- The final hardware should look like this:
+
+<img src="readme-images/buttons2.jpg" style="width: 300px" />
 
 # Software
 
