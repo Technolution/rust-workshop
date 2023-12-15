@@ -8,7 +8,6 @@ mod push_button;
 mod led;
 
 use delay::init_delay;
-use embedded_hal::digital::v2::OutputPin;
 use led::Led;
 use push_button::PushButton;
 use rp_pico::entry;

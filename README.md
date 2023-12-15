@@ -16,10 +16,19 @@ One side of the breadboard will be used for the leds, the other side for the but
 - 10 M-F jumper
 - 4x M-M jumper
 
+![](readme-images/rpi.jpg)
+
 ## Leds
-- Connect pin 16,17,19,20 to the red,green,blue,yellow led positive side respectively.
-- Connect neg side of the leds to the center column
-- Connect center column to ground
+- Connect pin 16,17,19,20 to the red,green,blue,yellow to the positive side of the LEDs.
+- Connect negative side of the leds to the center column using the resistors.
+- Connect center column to ground at pin 18. 
+- Your hardware should now look like this:
+
+![](readme-images/leds.jpg)
+
+
+
+## 
 
 
 # Software
