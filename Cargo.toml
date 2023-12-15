@@ -12,3 +12,4 @@ cortex-m-rt = "0.7.3"
 panic-halt = "0.2.0"
 embedded-hal = "0.2.7"
 embedded-alloc = "0.5.1"
+rand = { version = "0.8.5", features = ["small_rng"], default-features = false }
