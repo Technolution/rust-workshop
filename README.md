@@ -31,7 +31,7 @@ These sides will only interact via the raspberry pi.
 - Connect center rail to ground at pin 18 ground (black wire on the picture).
 - Your hardware should now look like this:
 
-<img src="readme-images/leds.jpg" style="width: 300px" /> <img src="readme-images/leds-schem.png" style="width: 300px" />
+<img src="readme-images/leds.jpg" style="height: 300px" /> <img src="readme-images/leds-schem.png" style="height: 300px" />
 
 ## Buttons
 
@@ -42,12 +42,12 @@ We will now connect the buttons, this will be a little messy because of all the 
 - Connect the center rail to pin 23 ground (purple wire on the picture).
 - Your hardware should now look like this:
 
-<img src="readme-images/buttons1.jpg" style="width: 300px" /> <img src="readme-images/buttons1-schem.png" style="width: 300px" />
+<img src="readme-images/buttons1.jpg" style="height: 300px" /> <img src="readme-images/buttons1-schem.png" style="height: 300px" />
 
 - Connect pins 25,24,22,21 to the other side of the buttons next to the red,green,blue,yellow leds respectively.
 - The final hardware should look like this:
 
-<img src="readme-images/buttons2.jpg" style="width: 300px" /> <img src="readme-images/buttons2-schem.png" style="width: 300px" />
+<img src="readme-images/buttons2.jpg" style="height: 300px" /> <img src="readme-images/buttons2-schem.png" style="height: 300px" />
 
 # Software
 
