@@ -26,9 +26,9 @@ Note: The **pin numbers** above differ from the **gpio numbers**. We will be ref
 We will use one side of the breadboard for the leds, and the other side for the buttons.
 These sides will only interact via the raspberry pi.
 
-- Connect pin 16,17,19,20 to the red,green,blue,yellow to the positive side of the LEDs.
-- Connect negative side of the leds to the center column using the resistors.
-- Connect center column to ground at pin 18 ground (black wire on the picture).
+- Connect pin 16,17,19,20 to the positive side of the red,green,blue,yellow LEDs respectively.
+- Connect the negative side of the leds to the center rail using the resistors.
+- Connect center rail to ground at pin 18 ground (black wire on the picture).
 - Your hardware should now look like this:
 
 <img src="readme-images/leds.jpg" style="width: 300px" />
