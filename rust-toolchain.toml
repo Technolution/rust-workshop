@@ -1,0 +1,4 @@
+[toolchain]
+channel = "stable"
+date = "2023-12-18"
+targets = ["thumbv6m-none-eabi"]
