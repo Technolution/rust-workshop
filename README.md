@@ -54,7 +54,6 @@ We will now connect the buttons, this will be a little messy because of all the 
 Installation:
 - Install VS code with the rust plugin: https://code.visualstudio.com/
 - Install rustup: https://rustup.rs/
-- Run: `rustup target add thumbv6m-none-eabi`
 - Run: `cargo install elf2uf2-rs`
 
 Running:
