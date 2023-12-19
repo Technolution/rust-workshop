@@ -52,7 +52,7 @@ We will now connect the buttons, this will be a little messy because of all the 
 # Software
 
 Installation:
-- Install VS code with the rust plugin: https://code.visualstudio.com/
+- Install VS code with the rust-analyzer plugin: https://code.visualstudio.com/
 - Install rustup: https://rustup.rs/
 - Run: `cargo install elf2uf2-rs`
 
