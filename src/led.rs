@@ -1,8 +1,5 @@
 use embedded_hal::digital::{OutputPin, PinState};
-use rp_pico::hal::gpio::{
-    Function, FunctionSio, Pin, PinId, PullDown,
-    SioOutput, ValidFunction,
-};
+use rp_pico::hal::gpio::{Function, FunctionSio, Pin, PinId, PullDown, SioOutput, ValidFunction};
 
 pub struct Led<I: PinId> {
     pin: Pin<I, FunctionSio<SioOutput>, PullDown>,
