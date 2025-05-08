@@ -57,10 +57,10 @@ fn main() -> ! {
     let mut led_y = Led::new(pins.gpio15); // pin 20
 
     // Create buttons
-    let but_r = PushButton::new(pins.gpio19); // pin 25
-    let but_g = PushButton::new(pins.gpio18); // pin 24
-    let but_b = PushButton::new(pins.gpio17); // pin 22
-    let but_y = PushButton::new(pins.gpio16); // pin 21
+    let mut but_r = PushButton::new(pins.gpio19); // pin 25
+    let mut but_g = PushButton::new(pins.gpio18); // pin 24
+    let mut but_b = PushButton::new(pins.gpio17); // pin 22
+    let mut but_y = PushButton::new(pins.gpio16); // pin 21
 
     // We enter a loop
     loop {

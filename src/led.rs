@@ -1,4 +1,4 @@
-use embedded_hal::digital::v2::{OutputPin, PinState};
+use embedded_hal::digital::{OutputPin, PinState};
 use rp_pico::hal::gpio::{
     Function, FunctionSio, Pin, PinId, PullDown,
     SioOutput, ValidFunction,

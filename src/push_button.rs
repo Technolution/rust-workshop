@@ -1,4 +1,4 @@
-use embedded_hal::digital::v2::InputPin;
+use embedded_hal::digital::InputPin;
 use rp_pico::hal::gpio::{
     Function, FunctionSio, Pin, PinId, PullType, PullUp, SioInput, ValidFunction,
 };
@@ -17,7 +17,7 @@ impl<I: PinId> PushButton<I> {
         }
     }
 
-    pub fn is_pressed(&self) -> bool {
+    pub fn is_pressed(&mut self) -> bool {
         self.pin.is_low().unwrap()
     }
 }
