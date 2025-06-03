@@ -60,7 +60,7 @@ Running:
 - Unplug rpi
 - Hold the bootsel button while plugging in the usb cable
 - Run: `cargo run`
-
+- After flashing, the default program should light up the LED corresponding to the button when pressed.
 
 
 
